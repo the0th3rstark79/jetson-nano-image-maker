@@ -31,7 +31,8 @@ RUN touch /opt/nvidia/l4t-packages/.nv-l4t-disable-boot-fw-update-in-preinstall
 COPY root/etc/apt/ /etc/apt
 COPY root/usr/share/keyrings /usr/share/keyrings
 RUN apt update
-RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+RUN  apt clean && apt update
+
 
 # nv-l4t-usb-device-mode
 RUN apt install -y bridge-utils
