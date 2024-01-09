@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as base
+FROM ubuntu:21.10 as base
 
 RUN apt update
 RUN apt install -y ca-certificates
