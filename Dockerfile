@@ -16,6 +16,7 @@ RUN apt install -y net-tools
 
 # needed by knod-static-nodes to create a list of static device nodes
 RUN apt install -y kmod
+RUN apt install -y libffi6-dev &&  libegl1-mesa-dev
 
 # Install our resizerootfs service
 COPY root/etc/systemd/ /etc/systemd
