@@ -16,8 +16,6 @@ RUN apt install -y net-tools
 
 # needed by knod-static-nodes to create a list of static device nodes
 RUN apt install -y kmod
-RUN apt install -y libffi6
-RUN apt install -y libegl1-mesa-dev
 
 # Install our resizerootfs service
 COPY root/etc/systemd/ /etc/systemd
@@ -34,7 +32,7 @@ COPY root/etc/apt/ /etc/apt
 COPY root/usr/share/keyrings /usr/share/keyrings
 RUN apt update
 RUN apt install -y libffi6
-RUN apt install -y libegl1-mesa-dev
+RUN apt install -y libegl1-mesa
 RUN  apt clean && apt update
 
 
@@ -46,8 +44,7 @@ RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
     nvidia-l4t-core \
     nvidia-l4t-init \
     nvidia-l4t-bootloader \
-    nvidia-l4t-camera \
-    nvidia-l4t-initrd \
+     nvidia-l4t-initrd \
     nvidia-l4t-xusb-firmware \
     nvidia-l4t-kernel \
     nvidia-l4t-kernel-dtbs \
