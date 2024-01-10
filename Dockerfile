@@ -31,8 +31,6 @@ RUN touch /opt/nvidia/l4t-packages/.nv-l4t-disable-boot-fw-update-in-preinstall
 COPY root/etc/apt/ /etc/apt
 COPY root/usr/share/keyrings /usr/share/keyrings
 RUN apt update
-RUN apt install -y libffi6
-RUN apt install -y libegl1-mesa
 RUN  apt clean && apt update
 
 
