@@ -4,7 +4,8 @@
 
 ## Problem
 
-After buying a hobby robot and companion Jetson Nano, I wanted to update the base image for my robot and iterate on my robot software. I struggled to find a simple set of instructions and scripts that would let me create my own images and flash them to an SD card from my Mac laptop.
+Jus a fork of the Jetson Nano with a lightweight desktop and currently in the testing phase. Using a JETSON NANO DEVELOPER KIT 4 GB
+
 
 Nvidia privides a set of docs, scripts, and guides from their [linux-for-tegra](https://developer.nvidia.com/embedded/jetson-linux-r341) environment but I found these cumbersome to understand and modify. Some of the scripts required a linux environment to even run.
 
