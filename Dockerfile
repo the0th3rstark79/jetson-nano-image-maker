@@ -21,6 +21,11 @@ RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
     python3-jetson-gpio \
     && rm -rf /opt/nvidia/l4t-packages
 
+# Install multimedia support
+RUN apt update && apt install -y \
+    nvidia-l4t-multimedia \
+    && apt clean
+
 # Install XFCE Desktop Environment
 RUN apt update && apt install -y \
     xfce4 xfce4-goodies \
